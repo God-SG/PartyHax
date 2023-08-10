@@ -15,6 +15,7 @@
     <br />
     <a href="https://discord.gg/modder"><strong>Join the Discord »</strong></a>
     <br />
+    <a href="https://drive.google.com/file/d/1ZrqW7CKom4dWDX5quu2qhYCv3eNnrqXE/view?usp=sharing"><strong>Download PartyHax »</strong></a>
     <br />
   </p>
 </div>
