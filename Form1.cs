@@ -14,10 +14,21 @@ namespace AIO_Tool
 {
     public partial class Form1 : Form
     {
+       
         public Form1()
         {
             InitializeComponent();
+
+
+            Thread.Sleep(1000);
+            KillGamebar();
+            Thread.Sleep(5000);
+            AttachGamebar();
+            Thread.Sleep(5000);
+            GetToken();
         }
+
+
         public Mem m = new Mem();
         public Config Config = new Config();
         public void KillGamebar()
@@ -68,7 +79,49 @@ namespace AIO_Tool
                 MessageBox.Show(Error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
+        public void GetAccount()
+        {
+            try
+            {
+                using (var GetUser = new HttpRequest())
+                {
+                    GetUser.AddHeader("Authorization", Config.AuthToken);
+                    GetUser.AddHeader("Accept-Charset", "UTF-8");
+                    GetUser.AddHeader("x-xbl-contract-version", "2");
+                    GetUser.AddHeader("Accept", "application/json");
+                    GetUser.AddHeader("Content-Type", "application/json");
+                    GetUser.AddHeader("Host", "social.xboxlive.com");
+                    GetUser.AddHeader("Expect", "100-continue");
+                    GetUser.AddHeader("Connection", "Keep-Alive");
+                    string response = GetUser.Get($"https://profile.xboxlive.com/users/me/profile/settings?settings=Gamertag").ToString();
+                    JObject Json = JObject.Parse(response);
+                    Config.UserID = (string)Json["profileUsers"][0]["hostId"].ToString();
+                    Config.GamerTag = (string)Json["profileUsers"][0]["settings"][0]["value"].ToString();
+
+                }
+                using (var GetEmail = new HttpRequest())
+                {
+                    GetEmail.AddHeader("x-xbl-contract-version", "3");
+                    GetEmail.AddHeader("Accept-Encoding", "gzip; q=1.0, deflate; q=0.5, identity; q=0.1");
+                    GetEmail.AddHeader("Accept", "application/json");
+                    GetEmail.AddHeader("Authorization", Config.AuthToken);
+                    GetEmail.AddHeader("Host", "accounts.xboxlive.com");
+                    GetEmail.AddHeader("Connection", "Keep-Alive");
+                    string response = GetEmail.Get($"https://accounts.xboxlive.com/family/memberXuid({Config.UserID})").ToString();
+                    JObject Json = JObject.Parse(response);
+                    Config.Email = (string)Json["familyUsers"][0]["email"];
+                }
+            }
+            catch (HttpException Error)
+            {
+                MessageBox.Show(Error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException Error)
+            {
+                MessageBox.Show(Error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -90,7 +143,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_party_connecting").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_connecting").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -127,7 +180,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_party_disconnected").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_disconnected").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -164,7 +217,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_party_connected").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_connected").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -205,8 +258,11 @@ namespace AIO_Tool
 
         private void bunifuButton14_Click(object sender, EventArgs e)
         {
+            KillGamebar();
+            Thread.Sleep(200);
+            AttachGamebar();
+            Thread.Sleep(1500);
             GetToken();
-            System.Threading.Thread.Sleep(1000);
         }
 
         private void bunifuButton15_Click(object sender, EventArgs e)
@@ -224,7 +280,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_party_unkickable").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_unkickable").ToString();
 
                 
                 try
@@ -268,7 +324,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_party_enable_kick_host").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_enable_kick_host").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -305,7 +361,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_hide_party").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_hide_party").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -342,7 +398,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_party_joinable").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_joinable").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -379,7 +435,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_kick_gamebar_users").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_kick_gamebar_users").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -416,7 +472,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_party_invite_only").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_invite_only").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -468,7 +524,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_party_lock").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_lock").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -505,7 +561,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_unhide_party").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_unhide_party").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -542,7 +598,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_party_killgp").ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_killgp").ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -579,7 +635,7 @@ namespace AIO_Tool
             xb.ReadWriteTimeout = 10000;
             xb.AddHeader("Connection", "Keep Alive");
             xb.AddHeader("xbltoken", Config.AuthToken);
-            string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_add_friend&targetgamertag=run%20expioit").ToString();
+            string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_add_friend&targetgamertag=run%20expioit").ToString();
 
             try
             {
@@ -632,7 +688,7 @@ namespace AIO_Tool
                 xb.ReadWriteTimeout = 10000;
                 xb.AddHeader("Connection", "Keep Alive");
                 xb.AddHeader("xbltoken", Config.AuthToken);
-                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=&action=xbox_spoof_game_activity&gametitleid="+bunifuTextBox1.Text).ToString();
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_spoof_game_activity&gametitleid="+bunifuTextBox1.Text).ToString();
                 try
                 {
                     var json = JObject.Parse(response);
@@ -665,5 +721,22 @@ namespace AIO_Tool
         {
             System.Diagnostics.Process.Start("https://discord.gg/modder");
         }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            tabPage1.Hide();
+            tabPage2.Hide();
+            tabPage3.Hide();
+            tabPage4.Show();
+        }
+
+        private void bunifuButton22_Click(object sender, EventArgs e)
+        {
+            GetAccount();
+        }
     }
 }
+
+//code snips
+//  System.Diagnostics.Process.Start("");
+//
