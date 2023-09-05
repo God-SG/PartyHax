@@ -48,7 +48,8 @@ So if you're looking for a partner in security, look no further than ShadowGarde
 ![image](https://github.com/God-SG/PartyHax/assets/109325773/fbd73c23-fd83-4be7-b73f-5a13ab4a89a8)
 
 
-https://github.com/God-SG/PartyHax/assets/109325773/602e409c-a0f9-42be-9882-e17a17779688
+
+https://github.com/God-SG/PartyHax/assets/109325773/ff7cc17b-c79c-4df0-b23e-b7b1c1170791
 
 
 
