@@ -1,0 +1,15 @@
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\bin\Release\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\bin\Release\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\bin\Release\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\bin\Release\SG_PartyHax.exe.config
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\bin\Release\SG_PartyHax.exe
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\bin\Release\SG_PartyHax.pdb
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\obj\Release\SG_PartyHax.csproj.AssemblyReference.cache
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\obj\Release\SG_PartyHax.csproj.SuggestedBindingRedirects.cache
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\obj\Release\SG_PartyHax.exe.config
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\obj\Release\SG_PartyHax.MainFRM.resources
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\obj\Release\SG_PartyHax.Properties.Resources.resources
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\obj\Release\SG_PartyHax.csproj.GenerateResource.cache
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\obj\Release\SG_PartyHax.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\obj\Release\SG_PartyHax.exe
+C:\Users\Josh\source\repos\XBL IS GAY\XBL IS GAY\obj\Release\SG_PartyHax.pdb
