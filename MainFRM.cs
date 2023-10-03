@@ -1,4 +1,5 @@
-﻿using Microsoft.Web.WebView2.Core;
+﻿using Leaf.xNet;
+using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json.Linq;
 using PartyHax.Helper;
 using PartyHax.Helper.Xbox;
@@ -187,6 +188,25 @@ namespace PartyHax
         public MainFRM()
         {
             InitializeComponent();
+
+            WebClient webClient = new WebClient();
+
+            try
+            {
+                if (!webClient.DownloadString("https://pastebin.com/raw/dJPHHRLm").Contains("1.0.1"))
+                {
+                    if (MessageBox.Show("Looks like there is an update! Do you want to download it?", "PartyHax", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        using (var client = new WebClient())
+                        {
+                            Process.Start("Updater.exe");
+                            this.Close();
+                        }
+                }
+            }
+            catch
+            {
+
+            }
 
             PartyMenu.Renderer = new Helper.MenuStrip.Overrides();
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 6, 6));
@@ -386,7 +406,7 @@ namespace PartyHax
         private void button24_Click(object sender, EventArgs e) => ChangePage("r2");
         private void button23_Click(object sender, EventArgs e) => ChangePage("r3");
         private void SiteBTN_Click(object sender, EventArgs e) => Process.Start("https://partyhax.club");
-        private void DiscordBTN_Click(object sender, EventArgs e) => Process.Start("https://discord.gg/modder");
+        private void DiscordBTN_Click(object sender, EventArgs e) => Process.Start("https://discord.gg/xboxmods");
         private void githubbtn_Click(object sender, EventArgs e) => Process.Start("https://github.com/God-SG/PartyHax");
         private void xboxfrbtn_Click(object sender, EventArgs e)
         {
@@ -498,7 +518,8 @@ namespace PartyHax
         }
         private void button28_Click(object sender, EventArgs e)
         {
-            AuthAPI.GrabParty();
+            //AuthAPI.GrabParty();
+            MessageBox.Show("Feature isnt done yet, Please join the Server\ndiscord.gg/xboxmods");
         }
         private void p1_Click(object sender, EventArgs e)
         {
@@ -509,31 +530,31 @@ namespace PartyHax
             if (PartyList.Rows.Count >= 0) Clipboard.SetText((string)PartyList.CurrentRow.Cells["gt"].Value);
         }
 
-        private void hidepartytoggle_ToggledChanged()
-        {
-            switch (hidepartytoggle.Toggled)
-            {
-                case true:
-                    MessageBox.Show(AuthAPI.MakeApiRequstCustom("xboxhideparty", "user_id", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-                case false:
-                    MessageBox.Show(AuthAPI.MakeApiRequstCustom("xboxunhideparty", "user_id", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-            }
-        }
+        //private void hidepartytoggle_ToggledChanged()
+        //{
+        //    switch (hidepartytoggle.Toggled)
+        //    {
+        //        case true:
+        //            MessageBox.Show(AuthAPI.MakeApiRequstCustom("xboxhideparty", "user_id", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            break;
+        //        case false:
+        //            MessageBox.Show(AuthAPI.MakeApiRequstCustom("xboxunhideparty", "user_id", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            break;
+        //    }
+        //}
 
-        private void inviteonlytoogle_ToggledChanged()
-        {
-            switch (hidepartytoggle.Toggled)
-            {
-                case true:
-                    MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartyinviteonly", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-                case false:
-                    MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartyjoinable", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-            }
-        }
+        //private void inviteonlytoogle_ToggledChanged()
+        //{
+        //    switch (hidepartytoggle.Toggled)
+        //    {
+        //        case true:
+        //            MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartyinviteonly", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            break;
+        //        case false:
+        //            MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartyjoinable", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            break;
+        //    }
+        //}
 
 
         private void sG_Toggle5_ToggledChanged()
@@ -546,35 +567,68 @@ namespace PartyHax
             MessageBox.Show(AuthAPI.MakeApiRequst("xboxenablekickhost", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void lockpartytoggle_ToggledChanged()
-        {
-            switch (hidepartytoggle.Toggled)
-            {
-                case true:
-                    MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartylock", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-                case false:
-                    MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartyunlock", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-            }
-        }
+        //private void lockpartytoggle_ToggledChanged()
+        //{
+        //    switch (hidepartytoggle.Toggled)
+        //    {
+        //        case true:
+        //            MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartylock", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            break;
+        //        case false:
+        //            MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartyunlock", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            break;
+        //    }
+        //}
 
-        private void sG_Toggle6_ToggledChanged()
-        {
-            switch (hidepartytoggle.Toggled)
-            {
-                case true:
-                    MessageBox.Show(AuthAPI.MakeApiRequstCustom("xboxprofileappearoffline", "userid", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-                case false:
-                    MessageBox.Show(AuthAPI.MakeApiRequstCustom("xboxprofileappearonline", "userid", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-            }
-        }
+        //private void sG_Toggle6_ToggledChanged()
+        //{
+        //    switch (hidepartytoggle.Toggled)
+        //    {
+        //        case true:
+        //            MessageBox.Show(AuthAPI.MakeApiRequstCustom("xboxprofileappearoffline", "userid", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            break;
+        //        case false:
+        //            MessageBox.Show(AuthAPI.MakeApiRequstCustom("xboxprofileappearonline", "userid", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            break;
+        //    }
+        //}
 
         private void button30_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartykillgp", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                HttpRequest xb = new HttpRequest();
+                xb.ReadWriteTimeout = 10000;
+                xb.AddHeader("Connection", "Keep Alive");
+                xb.AddHeader("xbltoken", XBLAPI.Config.AuthToken);
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_killgp").ToString();
+                try
+                {
+                    var json = JObject.Parse(response);
+
+                    string success = (string)json["success"];
+                    string message = (string)json["message"];
+
+                    if (success == "true")
+                    {
+                        MessageBox.Show(message);
+                    }
+                    else if (success == "false")
+                    {
+                        MessageBox.Show(message);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There Was An Error Getting API Response Please join the discord\ndiscord.gg/xboxmods");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There Was An Error Executing API Request Please join the Server\ndiscord.gg/xboxmods");
+
+            }
+            // MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartykillgp", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -598,7 +652,223 @@ namespace PartyHax
 
         private void button35_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartydisconneted", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                HttpRequest xb = new HttpRequest();
+                xb.ReadWriteTimeout = 10000;
+                xb.AddHeader("Connection", "Keep Alive");
+                xb.AddHeader("xbltoken", XBLAPI.Config.AuthToken);
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_disconnected").ToString();
+                try
+                {
+                    var json = JObject.Parse(response);
+
+                    string success = (string)json["success"];
+                    string message = (string)json["message"];
+
+                    if (success == "true")
+                    {
+                        MessageBox.Show(message);
+                    }
+                    else if (success == "false")
+                    {
+                        MessageBox.Show(message);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There Was An Error Getting API Response Please join the discord\ndiscord.gg/xboxmods");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There Was An Error Executing API Request Please join the Server\ndiscord.gg/xboxmods");
+
+            }
+            //MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartydisconneted", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void button28_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartyinviteonly", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button29_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartyjoinable", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(AuthAPI.MakeApiRequst("xboxpartyunkickable", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button36_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HttpRequest xb = new HttpRequest();
+                xb.ReadWriteTimeout = 10000;
+                xb.AddHeader("Connection", "Keep Alive");
+                xb.AddHeader("xbltoken", XBLAPI.Config.AuthToken);
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_hide_party").ToString();
+                try
+                {
+                    var json = JObject.Parse(response);
+
+                    string success = (string)json["success"];
+                    string message = (string)json["message"];
+
+                    if (success == "true")
+                    {
+                        MessageBox.Show(message);
+                    }
+                    else if (success == "false")
+                    {
+                        MessageBox.Show(message);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There Was An Error Getting API Response Please join the discord\ndiscord.gg/xboxmods");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There Was An Error Executing API Request Please join the Server\ndiscord.gg/xboxmods");
+
+            }
+
+            //  MessageBox.Show(AuthAPI.MakeApiRequstCustom("xboxhideparty", "user_id", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button37_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(AuthAPI.MakeApiRequst("xboxenablekickhost", XBLAPI.Config.UserID, XBLAPI.Config.AuthToken), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button38_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HttpRequest xb = new HttpRequest();
+                xb.ReadWriteTimeout = 10000;
+                xb.AddHeader("Connection", "Keep Alive");
+                xb.AddHeader("xbltoken", XBLAPI.Config.AuthToken);
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_party_lock").ToString();
+                try
+                {
+                    var json = JObject.Parse(response);
+
+                    string success = (string)json["success"];
+                    string message = (string)json["message"];
+
+                    if (success == "true")
+                    {
+                        MessageBox.Show(message);
+                    }
+                    else if (success == "false")
+                    {
+                        MessageBox.Show(message);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There Was An Error Getting API Response Please join the discord\ndiscord.gg/xboxmods");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There Was An Error Executing API Request Please join the Server\ndiscord.gg/xboxmods");
+
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button39_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HttpRequest xb = new HttpRequest();
+                xb.AddHeader("Connection", "Keep Alive");
+                string response = xb.Get("https://xboxresolver.io/search?Gamertag="+textBox1.Text).ToString();
+                try
+                {
+                    var json = JObject.Parse(response);
+
+                    string message = (string)json["message"];
+
+                        MessageBox.Show(message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There Was An Error Getting API Response Please join the discord\ndiscord.gg/xboxmods");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There Was An Error Executing API Request Please join the Server\ndiscord.gg/xboxmods");
+
+            }
+
+        }
+
+        private void RiskyPage1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button41_Click(object sender, EventArgs e) => Process.Start("https://pastebin.com/EN4dHEm5");
+
+        private void button40_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HttpRequest xb = new HttpRequest();
+                xb.ReadWriteTimeout = 10000;
+                xb.AddHeader("Connection", "Keep Alive");
+                xb.AddHeader("xbltoken", XBLAPI.Config.AuthToken);
+                string response = xb.Get("https://partyhax.club/handler/api/api.php?key=public&action=xbox_spoof_game_activity&gametitleid=" + richTextBox1.Text).ToString();
+                try
+                {
+                    var json = JObject.Parse(response);
+
+                    string success = (string)json["success"];
+                    string message = (string)json["message"];
+
+                    if (success == "true")
+                    {
+                        MessageBox.Show(message);
+                    }
+                    else if (success == "false")
+                    {
+                        MessageBox.Show(message);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There Was An Error Getting API Response Please join the discord\ndiscord..gg/xboxmods");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There Was An Error Executing API Request Please join the Server\ndiscord..gg/xboxmods");
+
+            }
+        }
+
+        private void button42_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Feature isnt done yet, Please join the Server\ndiscord.gg/xboxmods");
+        }
+
+        private void sG_Toggle7_ToggledChanged()
+        {
 
         }
 

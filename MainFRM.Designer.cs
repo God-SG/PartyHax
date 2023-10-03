@@ -32,12 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFRM));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.status = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.ExitBTN = new System.Windows.Forms.Button();
@@ -197,6 +197,12 @@
             this.p2 = new System.Windows.Forms.ToolStripMenuItem();
             this.grabprtybtn = new System.Windows.Forms.Button();
             this.Page2 = new System.Windows.Forms.Panel();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.sG_Toggle7 = new PartyHax.SG_Toggle();
@@ -206,20 +212,9 @@
             this.button35 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
-            this.sG_Toggle5 = new PartyHax.SG_Toggle();
-            this.antikicktoggle = new System.Windows.Forms.Label();
-            this.lockpartytoggle = new PartyHax.SG_Toggle();
-            this.label75 = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.sG_Toggle6 = new PartyHax.SG_Toggle();
-            this.offlinetoggle = new System.Windows.Forms.Label();
-            this.hidepartytoggle = new PartyHax.SG_Toggle();
-            this.label74 = new System.Windows.Forms.Label();
-            this.hkicktoggle = new PartyHax.SG_Toggle();
-            this.label76 = new System.Windows.Forms.Label();
-            this.inviteonlytoogle = new PartyHax.SG_Toggle();
-            this.label73 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -227,7 +222,21 @@
             this.Main = new System.Windows.Forms.Panel();
             this.label62 = new System.Windows.Forms.Label();
             this.Risky = new System.Windows.Forms.Panel();
+            this.RiskyPage1 = new System.Windows.Forms.Panel();
+            this.button42 = new System.Windows.Forms.Button();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.RiskyPage3 = new System.Windows.Forms.Panel();
+            this.button39 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
@@ -242,11 +251,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.RiskyPage1 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button17 = new System.Windows.Forms.Button();
@@ -313,14 +317,14 @@
             this.panel1.SuspendLayout();
             this.Main.SuspendLayout();
             this.Risky.SuspendLayout();
+            this.RiskyPage1.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.RiskyPage3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.RiskyPage2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.RiskyPage1.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -379,12 +383,12 @@
             this.label4.BackColor = System.Drawing.Color.Maroon;
             this.label4.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(288, 528);
+            this.label4.Location = new System.Drawing.Point(278, 530);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 20);
+            this.label4.Size = new System.Drawing.Size(127, 20);
             this.label4.TabIndex = 53;
-            this.label4.Text = "PartyHax v1.0";
+            this.label4.Text = "PartyHax v1.0.1";
             // 
             // Browser
             // 
@@ -577,7 +581,7 @@
             this.Home.Controls.Add(this.pictureBox9);
             this.Home.Controls.Add(this.label5);
             this.Home.Controls.Add(this.pictureBox6);
-            this.Home.Location = new System.Drawing.Point(11, 107);
+            this.Home.Location = new System.Drawing.Point(11, 108);
             this.Home.Margin = new System.Windows.Forms.Padding(4);
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(388, 410);
@@ -1136,7 +1140,7 @@
             this.Settings.Controls.Add(this.pictureBox23);
             this.Settings.Controls.Add(this.pictureBox24);
             this.Settings.Controls.Add(this.pictureBox25);
-            this.Settings.Location = new System.Drawing.Point(5925, 5470);
+            this.Settings.Location = new System.Drawing.Point(999, 2277);
             this.Settings.Margin = new System.Windows.Forms.Padding(4);
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(388, 410);
@@ -1235,7 +1239,7 @@
             this.isMemory.Size = new System.Drawing.Size(41, 23);
             this.isMemory.TabIndex = 95;
             this.isMemory.Text = "sG_Toggle4";
-            this.isMemory.Toggled = false;
+            this.isMemory.Toggled = true;
             this.isMemory.Type = PartyHax.SG_Toggle._Type.YesNo;
             // 
             // isAPI
@@ -2176,7 +2180,7 @@
             this.Page1.Controls.Add(this.panel2);
             this.Page1.Controls.Add(this.PartyList);
             this.Page1.Controls.Add(this.grabprtybtn);
-            this.Page1.Location = new System.Drawing.Point(6666, 6666);
+            this.Page1.Location = new System.Drawing.Point(6666, 777);
             this.Page1.Margin = new System.Windows.Forms.Padding(4);
             this.Page1.Name = "Page1";
             this.Page1.Size = new System.Drawing.Size(387, 319);
@@ -2308,32 +2312,32 @@
             this.gt,
             this.UserID});
             this.PartyList.ContextMenuStrip = this.PartyMenu;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PartyList.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PartyList.DefaultCellStyle = dataGridViewCellStyle14;
             this.PartyList.EnableHeadersVisualStyles = false;
             this.PartyList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.PartyList.Location = new System.Drawing.Point(7, 53);
             this.PartyList.Margin = new System.Windows.Forms.Padding(4);
             this.PartyList.Name = "PartyList";
             this.PartyList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PartyList.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PartyList.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.PartyList.RowHeadersVisible = false;
             this.PartyList.RowHeadersWidth = 51;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.PartyList.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.PartyList.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.PartyList.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.PartyList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PartyList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Silver;
@@ -2345,9 +2349,9 @@
             // 
             // id
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.DefaultCellStyle = dataGridViewCellStyle11;
             this.id.Frozen = true;
             this.id.HeaderText = "#";
             this.id.MinimumWidth = 6;
@@ -2357,9 +2361,9 @@
             // 
             // gt
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gt.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gt.DefaultCellStyle = dataGridViewCellStyle12;
             this.gt.Frozen = true;
             this.gt.HeaderText = "GAMERTAG";
             this.gt.MinimumWidth = 6;
@@ -2369,9 +2373,9 @@
             // 
             // UserID
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserID.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserID.DefaultCellStyle = dataGridViewCellStyle13;
             this.UserID.Frozen = true;
             this.UserID.HeaderText = "XUID";
             this.UserID.MinimumWidth = 6;
@@ -2437,6 +2441,12 @@
             // Page2
             // 
             this.Page2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.Page2.Controls.Add(this.button38);
+            this.Page2.Controls.Add(this.button37);
+            this.Page2.Controls.Add(this.button36);
+            this.Page2.Controls.Add(this.button32);
+            this.Page2.Controls.Add(this.button29);
+            this.Page2.Controls.Add(this.button28);
             this.Page2.Controls.Add(this.button30);
             this.Page2.Controls.Add(this.button31);
             this.Page2.Controls.Add(this.sG_Toggle7);
@@ -2446,26 +2456,75 @@
             this.Page2.Controls.Add(this.button35);
             this.Page2.Controls.Add(this.button34);
             this.Page2.Controls.Add(this.button33);
-            this.Page2.Controls.Add(this.sG_Toggle5);
-            this.Page2.Controls.Add(this.antikicktoggle);
-            this.Page2.Controls.Add(this.lockpartytoggle);
-            this.Page2.Controls.Add(this.label75);
             this.Page2.Controls.Add(this.label79);
             this.Page2.Controls.Add(this.pictureBox26);
             this.Page2.Controls.Add(this.sG_Toggle6);
-            this.Page2.Controls.Add(this.offlinetoggle);
-            this.Page2.Controls.Add(this.hidepartytoggle);
-            this.Page2.Controls.Add(this.label74);
-            this.Page2.Controls.Add(this.hkicktoggle);
-            this.Page2.Controls.Add(this.label76);
-            this.Page2.Controls.Add(this.inviteonlytoogle);
-            this.Page2.Controls.Add(this.label73);
             this.Page2.Controls.Add(this.panel1);
             this.Page2.Location = new System.Drawing.Point(1, 90);
             this.Page2.Margin = new System.Windows.Forms.Padding(4);
             this.Page2.Name = "Page2";
             this.Page2.Size = new System.Drawing.Size(387, 319);
             this.Page2.TabIndex = 103;
+            // 
+            // button38
+            // 
+            this.button38.Location = new System.Drawing.Point(203, 113);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(154, 29);
+            this.button38.TabIndex = 155;
+            this.button38.Text = "Lock Party";
+            this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
+            // 
+            // button37
+            // 
+            this.button37.Location = new System.Drawing.Point(203, 82);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(154, 31);
+            this.button37.TabIndex = 154;
+            this.button37.Text = "Kick Host";
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
+            // 
+            // button36
+            // 
+            this.button36.Location = new System.Drawing.Point(203, 50);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(154, 31);
+            this.button36.TabIndex = 153;
+            this.button36.Text = "Hide Party";
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
+            // 
+            // button32
+            // 
+            this.button32.Location = new System.Drawing.Point(35, 113);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(154, 31);
+            this.button32.TabIndex = 152;
+            this.button32.Text = "Anti-Kick";
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
+            // 
+            // button29
+            // 
+            this.button29.Location = new System.Drawing.Point(35, 82);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(154, 31);
+            this.button29.TabIndex = 151;
+            this.button29.Text = "Open Party";
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click_1);
+            // 
+            // button28
+            // 
+            this.button28.Location = new System.Drawing.Point(35, 51);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(154, 31);
+            this.button28.TabIndex = 150;
+            this.button28.Text = "Invite Only";
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click_1);
             // 
             // button30
             // 
@@ -2512,6 +2571,7 @@
             this.sG_Toggle7.Toggled = false;
             this.sG_Toggle7.Type = PartyHax.SG_Toggle._Type.YesNo;
             this.sG_Toggle7.Visible = false;
+            this.sG_Toggle7.ToggledChanged += new PartyHax.SG_Toggle.ToggledChangedEventHandler(this.sG_Toggle7_ToggledChanged);
             // 
             // label81
             // 
@@ -2602,56 +2662,6 @@
             this.button33.UseVisualStyleBackColor = false;
             this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
-            // sG_Toggle5
-            // 
-            this.sG_Toggle5.ForeColor = System.Drawing.Color.Silver;
-            this.sG_Toggle5.Location = new System.Drawing.Point(109, 116);
-            this.sG_Toggle5.Margin = new System.Windows.Forms.Padding(4);
-            this.sG_Toggle5.Name = "sG_Toggle5";
-            this.sG_Toggle5.Size = new System.Drawing.Size(41, 23);
-            this.sG_Toggle5.TabIndex = 138;
-            this.sG_Toggle5.Toggled = false;
-            this.sG_Toggle5.Type = PartyHax.SG_Toggle._Type.YesNo;
-            this.sG_Toggle5.ToggledChanged += new PartyHax.SG_Toggle.ToggledChangedEventHandler(this.sG_Toggle5_ToggledChanged);
-            // 
-            // antikicktoggle
-            // 
-            this.antikicktoggle.AutoSize = true;
-            this.antikicktoggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.antikicktoggle.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.antikicktoggle.ForeColor = System.Drawing.Color.Silver;
-            this.antikicktoggle.Location = new System.Drawing.Point(11, 117);
-            this.antikicktoggle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.antikicktoggle.Name = "antikicktoggle";
-            this.antikicktoggle.Size = new System.Drawing.Size(86, 20);
-            this.antikicktoggle.TabIndex = 137;
-            this.antikicktoggle.Text = "Anti Kick: ";
-            // 
-            // lockpartytoggle
-            // 
-            this.lockpartytoggle.ForeColor = System.Drawing.Color.Silver;
-            this.lockpartytoggle.Location = new System.Drawing.Point(313, 116);
-            this.lockpartytoggle.Margin = new System.Windows.Forms.Padding(4);
-            this.lockpartytoggle.Name = "lockpartytoggle";
-            this.lockpartytoggle.Size = new System.Drawing.Size(41, 23);
-            this.lockpartytoggle.TabIndex = 132;
-            this.lockpartytoggle.Toggled = false;
-            this.lockpartytoggle.Type = PartyHax.SG_Toggle._Type.YesNo;
-            this.lockpartytoggle.ToggledChanged += new PartyHax.SG_Toggle.ToggledChangedEventHandler(this.lockpartytoggle_ToggledChanged);
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.label75.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.ForeColor = System.Drawing.Color.Silver;
-            this.label75.Location = new System.Drawing.Point(213, 117);
-            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(98, 20);
-            this.label75.TabIndex = 131;
-            this.label75.Text = "Lock Party: ";
-            // 
             // label79
             // 
             this.label79.AutoSize = true;
@@ -2686,95 +2696,7 @@
             this.sG_Toggle6.TabIndex = 140;
             this.sG_Toggle6.Toggled = false;
             this.sG_Toggle6.Type = PartyHax.SG_Toggle._Type.YesNo;
-            this.sG_Toggle6.ToggledChanged += new PartyHax.SG_Toggle.ToggledChangedEventHandler(this.sG_Toggle6_ToggledChanged);
-            // 
-            // offlinetoggle
-            // 
-            this.offlinetoggle.AutoSize = true;
-            this.offlinetoggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.offlinetoggle.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.offlinetoggle.ForeColor = System.Drawing.Color.Silver;
-            this.offlinetoggle.Location = new System.Drawing.Point(11, 85);
-            this.offlinetoggle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.offlinetoggle.Name = "offlinetoggle";
-            this.offlinetoggle.Size = new System.Drawing.Size(98, 20);
-            this.offlinetoggle.TabIndex = 139;
-            this.offlinetoggle.Text = "Set Offline: ";
-            // 
-            // hidepartytoggle
-            // 
-            this.hidepartytoggle.ForeColor = System.Drawing.Color.Silver;
-            this.hidepartytoggle.Location = new System.Drawing.Point(315, 53);
-            this.hidepartytoggle.Margin = new System.Windows.Forms.Padding(4);
-            this.hidepartytoggle.Name = "hidepartytoggle";
-            this.hidepartytoggle.Size = new System.Drawing.Size(41, 23);
-            this.hidepartytoggle.TabIndex = 136;
-            this.hidepartytoggle.Toggled = false;
-            this.hidepartytoggle.Type = PartyHax.SG_Toggle._Type.YesNo;
-            this.hidepartytoggle.ToggledChanged += new PartyHax.SG_Toggle.ToggledChangedEventHandler(this.hidepartytoggle_ToggledChanged);
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.label74.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.ForeColor = System.Drawing.Color.Silver;
-            this.label74.Location = new System.Drawing.Point(215, 54);
-            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(98, 20);
-            this.label74.TabIndex = 135;
-            this.label74.Text = "Hide Party: ";
-            // 
-            // hkicktoggle
-            // 
-            this.hkicktoggle.ForeColor = System.Drawing.Color.Silver;
-            this.hkicktoggle.Location = new System.Drawing.Point(313, 84);
-            this.hkicktoggle.Margin = new System.Windows.Forms.Padding(4);
-            this.hkicktoggle.Name = "hkicktoggle";
-            this.hkicktoggle.Size = new System.Drawing.Size(41, 23);
-            this.hkicktoggle.TabIndex = 134;
-            this.hkicktoggle.Toggled = false;
-            this.hkicktoggle.Type = PartyHax.SG_Toggle._Type.YesNo;
-            this.hkicktoggle.ToggledChanged += new PartyHax.SG_Toggle.ToggledChangedEventHandler(this.hkicktoggle_ToggledChanged);
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.label76.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.ForeColor = System.Drawing.Color.Silver;
-            this.label76.Location = new System.Drawing.Point(213, 85);
-            this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(90, 20);
-            this.label76.TabIndex = 133;
-            this.label76.Text = "Kick Host: ";
-            // 
-            // inviteonlytoogle
-            // 
-            this.inviteonlytoogle.ForeColor = System.Drawing.Color.Silver;
-            this.inviteonlytoogle.Location = new System.Drawing.Point(112, 53);
-            this.inviteonlytoogle.Margin = new System.Windows.Forms.Padding(4);
-            this.inviteonlytoogle.Name = "inviteonlytoogle";
-            this.inviteonlytoogle.Size = new System.Drawing.Size(41, 23);
-            this.inviteonlytoogle.TabIndex = 128;
-            this.inviteonlytoogle.Toggled = false;
-            this.inviteonlytoogle.Type = PartyHax.SG_Toggle._Type.YesNo;
-            this.inviteonlytoogle.ToggledChanged += new PartyHax.SG_Toggle.ToggledChangedEventHandler(this.inviteonlytoogle_ToggledChanged);
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.label73.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.ForeColor = System.Drawing.Color.Silver;
-            this.label73.Location = new System.Drawing.Point(11, 54);
-            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(102, 20);
-            this.label73.TabIndex = 127;
-            this.label73.Text = "Invite Only: ";
+            this.sG_Toggle6.Visible = false;
             // 
             // panel1
             // 
@@ -2869,7 +2791,7 @@
             this.Main.Controls.Add(this.label61);
             this.Main.Controls.Add(this.pictureBox17);
             this.Main.Controls.Add(this.pictureBox18);
-            this.Main.Location = new System.Drawing.Point(999, 999);
+            this.Main.Location = new System.Drawing.Point(17761, 22211);
             this.Main.Margin = new System.Windows.Forms.Padding(4);
             this.Main.Name = "Main";
             this.Main.Size = new System.Drawing.Size(388, 410);
@@ -2893,10 +2815,10 @@
             // 
             this.Risky.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Risky.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Risky.BackgroundImage")));
+            this.Risky.Controls.Add(this.RiskyPage1);
             this.Risky.Controls.Add(this.RiskyPage3);
             this.Risky.Controls.Add(this.RiskyPage2);
             this.Risky.Controls.Add(this.panel5);
-            this.Risky.Controls.Add(this.RiskyPage1);
             this.Risky.Controls.Add(this.panel9);
             this.Risky.Controls.Add(this.label30);
             this.Risky.Controls.Add(this.label34);
@@ -2919,21 +2841,235 @@
             this.Risky.Controls.Add(this.pictureBox15);
             this.Risky.Controls.Add(this.label72);
             this.Risky.Controls.Add(this.pictureBox16);
-            this.Risky.Location = new System.Drawing.Point(4444, 4102);
+            this.Risky.Location = new System.Drawing.Point(4444, 3372);
             this.Risky.Margin = new System.Windows.Forms.Padding(4);
             this.Risky.Name = "Risky";
             this.Risky.Size = new System.Drawing.Size(388, 410);
             this.Risky.TabIndex = 60;
             // 
+            // RiskyPage1
+            // 
+            this.RiskyPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.RiskyPage1.Controls.Add(this.button42);
+            this.RiskyPage1.Controls.Add(this.richTextBox3);
+            this.RiskyPage1.Controls.Add(this.richTextBox2);
+            this.RiskyPage1.Controls.Add(this.button41);
+            this.RiskyPage1.Controls.Add(this.button40);
+            this.RiskyPage1.Controls.Add(this.richTextBox1);
+            this.RiskyPage1.Controls.Add(this.panel8);
+            this.RiskyPage1.Location = new System.Drawing.Point(1, 94);
+            this.RiskyPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.RiskyPage1.Name = "RiskyPage1";
+            this.RiskyPage1.Size = new System.Drawing.Size(387, 319);
+            this.RiskyPage1.TabIndex = 101;
+            this.RiskyPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.RiskyPage1_Paint);
+            // 
+            // button42
+            // 
+            this.button42.BackColor = System.Drawing.Color.Maroon;
+            this.button42.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button42.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button42.ForeColor = System.Drawing.Color.Silver;
+            this.button42.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button42.Location = new System.Drawing.Point(25, 221);
+            this.button42.Margin = new System.Windows.Forms.Padding(4);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(325, 32);
+            this.button42.TabIndex = 117;
+            this.button42.Text = "Console Ban";
+            this.button42.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button42.UseVisualStyleBackColor = false;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.BackColor = System.Drawing.SystemColors.InfoText;
+            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.richTextBox3.Location = new System.Drawing.Point(25, 176);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(325, 39);
+            this.richTextBox3.TabIndex = 116;
+            this.richTextBox3.Text = "Victims Token";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.InfoText;
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.richTextBox2.Location = new System.Drawing.Point(25, 131);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(325, 39);
+            this.richTextBox2.TabIndex = 115;
+            this.richTextBox2.Text = "Network Device ID";
+            // 
+            // button41
+            // 
+            this.button41.BackColor = System.Drawing.Color.Maroon;
+            this.button41.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button41.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button41.ForeColor = System.Drawing.Color.Silver;
+            this.button41.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button41.Location = new System.Drawing.Point(197, 67);
+            this.button41.Margin = new System.Windows.Forms.Padding(4);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(48, 32);
+            this.button41.TabIndex = 114;
+            this.button41.Text = "ids";
+            this.button41.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button41.UseVisualStyleBackColor = false;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
+            // 
+            // button40
+            // 
+            this.button40.BackColor = System.Drawing.Color.Maroon;
+            this.button40.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button40.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button40.ForeColor = System.Drawing.Color.Silver;
+            this.button40.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button40.Location = new System.Drawing.Point(25, 67);
+            this.button40.Margin = new System.Windows.Forms.Padding(4);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(172, 32);
+            this.button40.TabIndex = 113;
+            this.button40.Text = "Spoof Activity";
+            this.button40.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button40.UseVisualStyleBackColor = false;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.InfoText;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.richTextBox1.Location = new System.Drawing.Point(25, 30);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(220, 39);
+            this.richTextBox1.TabIndex = 112;
+            this.richTextBox1.Text = "GameID";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.Controls.Add(this.button14);
+            this.panel8.Controls.Add(this.button15);
+            this.panel8.Controls.Add(this.button16);
+            this.panel8.Location = new System.Drawing.Point(271, -4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(129, 55);
+            this.panel8.TabIndex = 111;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Maroon;
+            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.Color.Silver;
+            this.button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button14.Location = new System.Drawing.Point(77, 7);
+            this.button14.Margin = new System.Windows.Forms.Padding(4);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(32, 41);
+            this.button14.TabIndex = 112;
+            this.button14.Text = "3";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Maroon;
+            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.Silver;
+            this.button15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button15.Location = new System.Drawing.Point(43, 7);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(32, 41);
+            this.button15.TabIndex = 111;
+            this.button15.Text = "2";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.Maroon;
+            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.Silver;
+            this.button16.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button16.Location = new System.Drawing.Point(8, 7);
+            this.button16.Margin = new System.Windows.Forms.Padding(4);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(32, 41);
+            this.button16.TabIndex = 110;
+            this.button16.Text = "1";
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button25_Click);
+            // 
             // RiskyPage3
             // 
             this.RiskyPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.RiskyPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RiskyPage3.BackgroundImage")));
+            this.RiskyPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RiskyPage3.Controls.Add(this.button39);
+            this.RiskyPage3.Controls.Add(this.comboBox1);
+            this.RiskyPage3.Controls.Add(this.textBox1);
             this.RiskyPage3.Controls.Add(this.panel11);
-            this.RiskyPage3.Location = new System.Drawing.Point(-11851, -10939);
+            this.RiskyPage3.Location = new System.Drawing.Point(9872, 4618);
             this.RiskyPage3.Margin = new System.Windows.Forms.Padding(4);
             this.RiskyPage3.Name = "RiskyPage3";
             this.RiskyPage3.Size = new System.Drawing.Size(387, 319);
             this.RiskyPage3.TabIndex = 105;
+            // 
+            // button39
+            // 
+            this.button39.BackColor = System.Drawing.Color.Black;
+            this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button39.ForeColor = System.Drawing.Color.Red;
+            this.button39.Location = new System.Drawing.Point(222, 3);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(46, 32);
+            this.button39.TabIndex = 114;
+            this.button39.Text = "Get";
+            this.button39.UseVisualStyleBackColor = false;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Black;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Red;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Gamertag",
+            "Email",
+            "Username"});
+            this.comboBox1.Location = new System.Drawing.Point(110, 8);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(114, 24);
+            this.comboBox1.TabIndex = 113;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Red;
+            this.textBox1.Location = new System.Drawing.Point(9, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(102, 22);
+            this.textBox1.TabIndex = 112;
             // 
             // panel11
             // 
@@ -2956,7 +3092,7 @@
             this.button23.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.ForeColor = System.Drawing.Color.Silver;
             this.button23.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button23.Location = new System.Drawing.Point(77, 7);
+            this.button23.Location = new System.Drawing.Point(77, 4);
             this.button23.Margin = new System.Windows.Forms.Padding(4);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(32, 41);
@@ -2973,7 +3109,7 @@
             this.button24.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button24.ForeColor = System.Drawing.Color.Silver;
             this.button24.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button24.Location = new System.Drawing.Point(43, 7);
+            this.button24.Location = new System.Drawing.Point(43, 4);
             this.button24.Margin = new System.Windows.Forms.Padding(4);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(32, 41);
@@ -2990,7 +3126,7 @@
             this.button25.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.ForeColor = System.Drawing.Color.Silver;
             this.button25.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button25.Location = new System.Drawing.Point(8, 7);
+            this.button25.Location = new System.Drawing.Point(8, 4);
             this.button25.Margin = new System.Windows.Forms.Padding(4);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(32, 41);
@@ -3003,7 +3139,7 @@
             // 
             this.RiskyPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.RiskyPage2.Controls.Add(this.panel7);
-            this.RiskyPage2.Location = new System.Drawing.Point(0, 89);
+            this.RiskyPage2.Location = new System.Drawing.Point(1111, 1111);
             this.RiskyPage2.Margin = new System.Windows.Forms.Padding(4);
             this.RiskyPage2.Name = "RiskyPage2";
             this.RiskyPage2.Size = new System.Drawing.Size(387, 319);
@@ -3143,80 +3279,6 @@
             this.button13.TabIndex = 110;
             this.button13.Text = "1";
             this.button13.UseVisualStyleBackColor = false;
-            // 
-            // RiskyPage1
-            // 
-            this.RiskyPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.RiskyPage1.Controls.Add(this.panel8);
-            this.RiskyPage1.Location = new System.Drawing.Point(-8888, -8204);
-            this.RiskyPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.RiskyPage1.Name = "RiskyPage1";
-            this.RiskyPage1.Size = new System.Drawing.Size(387, 319);
-            this.RiskyPage1.TabIndex = 101;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.Controls.Add(this.button14);
-            this.panel8.Controls.Add(this.button15);
-            this.panel8.Controls.Add(this.button16);
-            this.panel8.Location = new System.Drawing.Point(271, -4);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(129, 55);
-            this.panel8.TabIndex = 111;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.Maroon;
-            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.Silver;
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button14.Location = new System.Drawing.Point(77, 7);
-            this.button14.Margin = new System.Windows.Forms.Padding(4);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(32, 41);
-            this.button14.TabIndex = 112;
-            this.button14.Text = "3";
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button23_Click);
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.Maroon;
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.Silver;
-            this.button15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button15.Location = new System.Drawing.Point(43, 7);
-            this.button15.Margin = new System.Windows.Forms.Padding(4);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(32, 41);
-            this.button15.TabIndex = 111;
-            this.button15.Text = "2";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.Maroon;
-            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.Silver;
-            this.button16.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button16.Location = new System.Drawing.Point(8, 7);
-            this.button16.Margin = new System.Windows.Forms.Padding(4);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(32, 41);
-            this.button16.TabIndex = 110;
-            this.button16.Text = "1";
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button25_Click);
             // 
             // panel9
             // 
@@ -3639,14 +3701,15 @@
             this.Main.PerformLayout();
             this.Risky.ResumeLayout(false);
             this.Risky.PerformLayout();
+            this.RiskyPage1.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.RiskyPage3.ResumeLayout(false);
+            this.RiskyPage3.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.RiskyPage2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.RiskyPage1.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -3872,15 +3935,6 @@
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.PictureBox pictureBox26;
         private SG_Toggle sG_Toggle6;
-        private System.Windows.Forms.Label offlinetoggle;
-        private SG_Toggle sG_Toggle5;
-        private System.Windows.Forms.Label antikicktoggle;
-        private SG_Toggle hidepartytoggle;
-        private System.Windows.Forms.Label label74;
-        private SG_Toggle hkicktoggle;
-        private System.Windows.Forms.Label label76;
-        private SG_Toggle inviteonlytoogle;
-        private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.PictureBox pictureBox27;
         private SG_Toggle sG_Toggle7;
@@ -3890,7 +3944,20 @@
         private System.Windows.Forms.Button button35;
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.Button button33;
-        private SG_Toggle lockpartytoggle;
-        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Button button38;
+        private System.Windows.Forms.Button button37;
+        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button39;
+        private System.Windows.Forms.Button button40;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button41;
+        private System.Windows.Forms.Button button42;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
