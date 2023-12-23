@@ -45,7 +45,8 @@ At ShadowGarden, we're committed to providing our clients with the highest level
 
 So if you're looking for a partner in security, look no further than ShadowGarden. Our team of experts is here to help you protect what matters most, so you can focus on what you do best. Contact us today to learn more about our services and how we can help you stay safe and secure.
 
-![image](https://github.com/God-SG/PartyHax/assets/109325773/fbd73c23-fd83-4be7-b73f-5a13ab4a89a8)
+![image](https://github.com/God-SG/PartyHax/assets/109325773/08976452-9809-4ed6-b234-072062f227a5)
+
 
 
 
