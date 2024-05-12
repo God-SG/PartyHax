@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://partyhax.club/dashboard/index.html">
+  <a href="https://partyhax.club/">
     <img src="https://cdn.discordapp.com/emojis/1119659712833650719.webp?size=128&quality=lossless" alt="Logo" width="80" height="80">
   </a>
 
