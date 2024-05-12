@@ -13,7 +13,7 @@
   <p align="center">
     Power to the Players
     <br />
-    <a href="https://discord.gg/xboxmods"><strong>Join the Discord »</strong></a>
+    <a href="https://discord.gg/shadowgarden"><strong>Join the Discord »</strong></a>
     <br />
     <a href="https://github.com/God-SG/PartyHax/releases/"><strong>Download PartyHax »</strong></a>
     <br />
@@ -74,4 +74,4 @@ ShadowGarden is committed to delivering cutting-edge features and keeping our so
 <!-- CONTACT -->
 ## Contact
 
-* _For support, please refer to the [discord](https://discord.gg/XboxMods)_
+* _For support, please refer to the [discord](https://discord.gg/shadowgarden)_
