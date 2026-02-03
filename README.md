@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://partyhax.club/">
+  <a href="https://partyhax.net/">
     <img src="https://cdn.discordapp.com/emojis/1119659712833650719.webp?size=128&quality=lossless" alt="Logo" width="80" height="80">
   </a>
 
@@ -15,7 +15,7 @@
     <br />
     <a href="https://discord.gg/shadowgarden"><strong>Join the Discord »</strong></a>
     <br />
-    <a href="https://github.com/God-SG/PartyHax/releases/"><strong>Download PartyHax »</strong></a>
+    <a href="https://partyhax.net/"><strong>Go to PartyHax »</strong></a>
     <br />
   </p>
 </div>
